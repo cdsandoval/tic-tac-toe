@@ -1,13 +1,11 @@
-def get_p1
-    @show_array = ["","X",""]
-    show = @show_array.map {|val,index| 
-        if val.empty? 
-           puts index
-        end
-    }
+##Esta era la solucion que nos sugerio Arturo Puente
+##Nuestra primera idea era solo mostrar los index disponibles del array
+##Con eso, solo mostrariamos los disponibles para el usuario
 
-    
-    
-  end
+def map_with_index
+   array = [0,1,2,3,"","","",]
 
-  get_p1
+   puts array.map.with_index{|value,index| index if value == ""}.compact.join(" ")
+end
+
+map_with_index
